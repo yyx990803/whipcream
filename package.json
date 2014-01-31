@@ -1,0 +1,39 @@
+{
+  "name": "melon",
+  "version": "0.0.1",
+  "description": "a sweet wrapper for wd",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yyx990803/melon.git"
+  },
+  "keywords": [
+    "wd",
+    "selenium",
+    "test",
+    "automation"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yyx990803/melon/issues"
+  },
+  "homepage": "https://github.com/yyx990803/melon",
+  "peerDependencies": {
+    "chai-as-promised": "~4.1.0",
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "mocha-as-promised": "~2.0.0",
+    "wd": "~0.2.10"
+  },
+  "devDependencies": {
+    "chai-as-promised": "~4.1.0",
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "mocha-as-promised": "~2.0.0",
+    "wd": "~0.2.10"
+  }
+}
