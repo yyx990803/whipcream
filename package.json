@@ -1,14 +1,14 @@
 {
-  "name": "melon",
+  "name": "whipcream",
   "version": "0.0.1",
-  "description": "a sweet wrapper for wd",
+  "description": "a sweet wrapper for running wd tests with mocha",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yyx990803/melon.git"
+    "url": "https://github.com/yyx990803/whipcream.git"
   },
   "keywords": [
     "wd",
@@ -19,9 +19,9 @@
   "author": "Evan You",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yyx990803/melon/issues"
+    "url": "https://github.com/yyx990803/whipcream/issues"
   },
-  "homepage": "https://github.com/yyx990803/melon",
+  "homepage": "https://github.com/yyx990803/whipcream",
   "peerDependencies": {
     "chai-as-promised": "~4.1.0",
     "chai": "~1.9.0",
