@@ -4,7 +4,7 @@
   "description": "a sweet wrapper for running wd tests with mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -R spec -t 10000 -s 1000"
   },
   "repository": {
     "type": "git",
