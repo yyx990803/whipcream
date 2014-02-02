@@ -3,10 +3,10 @@
 Chai-style chaining sugar for webdriverjs.
 
 ``` js
-var webdriverjs = require('webdriverjs'),
-    whipcream = require('whipcream')
+var webdriverjs = require('webdriverjs')
 
-whipcream.addTo(webdriverjs)
+// invoke whipcream augmentation
+require('whipcream')()
 
 webdriverjs
     .remote()

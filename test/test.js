@@ -1,7 +1,7 @@
 var webdriverjs = require('webdriverjs'),
     whipcream = require('../')
 
-whipcream.addTo(webdriverjs)
+whipcream()
 
 describe('whipcream', function () {
 

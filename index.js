@@ -1,8 +1,8 @@
 var Asserter = require('./lib/asserter')
 
-exports.Asserter = Asserter
+module.exports = function (wd) {
 
-exports.addTo = function (wd) {
+    wd = wd || require('webdriverjs')
 
     // initiate a new selector scope
     wd.prototype.$ = wd.prototype.expect = function (selector) {
@@ -20,3 +20,5 @@ exports.addTo = function (wd) {
     Object.defineProperty(wd.prototype, 'to', chain)
 
 }
+
+module.exports.Asserter = Asserter
