@@ -1,10 +1,10 @@
 {
   "name": "whipcream",
-  "version": "0.0.1",
-  "description": "a sweet wrapper for running wd tests with mocha",
+  "version": "0.0.2",
+  "description": "Should-style chaining sugar for webdriverjs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec -t 10000 -s 1000"
+    "test": "mocha -R spec -t 10000 -s 10000"
   },
   "repository": {
     "type": "git",

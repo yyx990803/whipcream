@@ -17,8 +17,15 @@ describe('whipcream', function () {
     
     it('should work', function (done) {
         browser
-            .$('#main').should.not.be.visible()
-            .$('#footer').should.not.be.visible()
+            .$('#main')
+                .should.exist
+                .should.not.be.visible
+                .should.have.attribute('id', 'main')
+                .should.have.count(1)
+            .$('#footer')
+                .should.not.be.visible
+            .$('#new-todo')
+                .should.have.value('')
             .call(done)
     })
 
