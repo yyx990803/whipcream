@@ -5,7 +5,10 @@ Chai-style chaining sugar for webdriverjs.
 ``` js
 var webdriverjs = require('webdriverjs')
 
-// invoke whipcream augmentation
+// invoke whipcream augmentation.
+// you can pass in the webdriverjs constructor,
+// a browser instance returned from remote(),
+// or nothing. (it will auto require webdriverjs)
 require('whipcream')()
 
 webdriverjs

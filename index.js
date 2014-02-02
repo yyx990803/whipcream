@@ -3,9 +3,11 @@ var Asserter = require('./lib/asserter')
 module.exports = function (wd) {
 
     wd = wd || require('webdriverjs')
+    var proto = wd.prototype || wd.__proto__
+    if (typeof proto.$ === 'function' && typeof proto.expect === 'function') return
 
     // initiate a new selector scope
-    wd.prototype.$ = wd.prototype.expect = function (selector) {
+    proto.$ = proto.expect = function (selector) {
         this.__wc_selector = selector
         return new Asserter(this, selector)
     }
@@ -16,8 +18,8 @@ module.exports = function (wd) {
             return new Asserter(this, this.__wc_selector)
         }
     }
-    Object.defineProperty(wd.prototype, 'should', chain)
-    Object.defineProperty(wd.prototype, 'to', chain)
+    Object.defineProperty(proto, 'should', chain)
+    Object.defineProperty(proto, 'to', chain)
 
 }
 
