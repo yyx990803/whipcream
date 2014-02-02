@@ -1,10 +1,10 @@
 # Whipcream
 
-Should-style chaining sugar for webdriverjs.
+Chai-style chaining sugar for webdriverjs.
 
 ``` js
 var webdriverjs = require('webdriverjs'),
-    whipcream = require('../')
+    whipcream = require('whipcream')
 
 whipcream.addTo(webdriverjs)
 
@@ -12,12 +12,14 @@ webdriverjs
     .remote()
     .init()
     .url('...')
+    // should style
     .$('#message')
         .should.exist
         .should.be.visible
         .should.have.text('hello')
-    .$('.items')
-        .should.have.count(5)
+    // expect style
+    .expect('#footer')
+        .to.be.visible
+        .to.have.css('color', 'black')
     .end()
-
 ```

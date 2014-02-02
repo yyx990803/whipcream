@@ -24,8 +24,9 @@ describe('whipcream', function () {
                 .should.have.count(1)
             .$('#footer')
                 .should.not.be.visible
-            .$('#new-todo')
-                .should.have.value('')
+            .expect('#new-todo')
+                .to.be.visible
+                .to.have.value('')
             .call(done)
     })
 
