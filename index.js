@@ -1,16 +1,9 @@
-var wd             = require('wd'),
-    chai           = require("chai"),
-    chaiAsPromised = require("chai-as-promised"),
-    methods        = require('./lib/methods')
+var Asserter = require('./lib/asserter')
 
-// setup
-require("mocha-as-promised")()
-chai.use(chaiAsPromised)
-chai.should()
-chaiAsPromised.transferPromiseness = wd.transferPromiseness;
+exports.Asserter = Asserter
 
-for (var m in methods) {
-    wd.addPromiseChainMethod(m, methods[m])
+exports.addTo = function (wd) {
+    wd.prototype.$ = function (selector) {
+        return new Asserter(this, selector)
+    }
 }
-
-module.exports = wd

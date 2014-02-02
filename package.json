@@ -11,7 +11,7 @@
     "url": "https://github.com/yyx990803/whipcream.git"
   },
   "keywords": [
-    "wd",
+    "webdriverjs",
     "selenium",
     "test",
     "automation"
@@ -23,17 +23,10 @@
   },
   "homepage": "https://github.com/yyx990803/whipcream",
   "peerDependencies": {
-    "chai-as-promised": "~4.1.0",
-    "chai": "~1.9.0",
-    "mocha": "~1.17.1",
-    "mocha-as-promised": "~2.0.0",
-    "wd": "~0.2.10"
+    "webdriverjs": "~1.3.1"
   },
   "devDependencies": {
-    "chai-as-promised": "~4.1.0",
-    "chai": "~1.9.0",
     "mocha": "~1.17.1",
-    "mocha-as-promised": "~2.0.0",
-    "wd": "~0.2.10"
+    "webdriverjs": "~1.3.1"
   }
 }
