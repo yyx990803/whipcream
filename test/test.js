@@ -9,7 +9,7 @@ describe('whipcream', function () {
 
     before(function (done) {
         browser = webdriverjs
-            .remote({ desiredCapabilities: { browserName: 'chrome' }})
+            .remote({ desiredCapabilities: { browserName: 'phantomjs' }})
             .init()
             .url('http://localhost:8081/examples/todomvc/index.html?test=1')
             .waitFor('#todoapp', 1000, done)

@@ -1,4 +1,5 @@
-var Asserter = require('./lib/asserter')
+var Asserter = require('./lib/asserter'),
+    commands = require('./lib/commands')
 
 module.exports = function (wd) {
 
@@ -9,7 +10,7 @@ module.exports = function (wd) {
     // initiate a new selector scope
     proto.$ = proto.expect = function (selector) {
         this.__wc_selector = selector
-        return new Asserter(this, selector)
+        return this
     }
 
     // allow chaining within current selector scope
@@ -20,6 +21,8 @@ module.exports = function (wd) {
     }
     Object.defineProperty(proto, 'should', chain)
     Object.defineProperty(proto, 'to', chain)
+
+    commands.addTo(proto)
 
 }
 

@@ -1,10 +1,10 @@
 {
   "name": "whipcream",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Chai-style chaining sugar for webdriverjs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec -t 10000 -s 10000"
+    "test": "_mocha -R spec -t 100000 -s 10000"
   },
   "repository": {
     "type": "git",
